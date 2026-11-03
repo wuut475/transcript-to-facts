@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    width:1240px; padding:34px 40px 26px;
+    font-family:"PingFang SC","Heiti SC","Hiragino Sans GB",sans-serif;
+    background:#f4f6f8; color:#1a2029;
+  }
+  .head { display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:20px; }
+  .head h1 { font-size:23px; font-weight:600; letter-spacing:.2px; }
+  .head .sub { font-size:13px; color:#6b7785; margin-top:7px; }
+  .badge { font-size:12px; color:#1f6f4a; background:#e2f2e9; border:1px solid #b9dcc9;
+           padding:5px 11px; border-radius:5px; font-weight:600; letter-spacing:.3px; }
+  .cols { display:flex; gap:20px; align-items:stretch; }
+  .col { flex:1; background:#fff; border:1px solid #dfe4ea; border-radius:9px; overflow:hidden;
+         display:flex; flex-direction:column; }
+  .col.left { background:#fbfbfc; }
+  .col-hd { padding:11px 16px; border-bottom:1px solid #e6eaee; display:flex;
+            justify-content:space-between; align-items:center; }
+  .col-hd .t { font-size:14px; font-weight:600; }
+  .col-hd .n { font-size:11.5px; color:#8a95a1; font-variant-numeric:tabular-nums; }
+  .col.left .col-hd { background:#f0f2f5; }
+  .col.right .col-hd { background:#eef4f1; border-bottom-color:#d6e6dc; }
+  .body { padding:13px 16px 15px; font-size:13.2px; line-height:1.92; }
+  .ln { display:flex; gap:9px; }
+  .ln .no { color:#a8b2bd; font-size:11.5px; min-width:24px; text-align:right;
+            font-variant-numeric:tabular-nums; padding-top:3px; }
+  .ln .txt { flex:1; }
+  .spk { color:#7b8794; font-size:12px; }
+  .bad { background:#fdecec; color:#b42318; border-radius:3px; padding:0 3px;
+         text-decoration:line-through; text-decoration-color:#d99; }
+  .warn { background:#fff6e5; color:#8a5a00; border-radius:3px; padding:0 3px; }
+  .tag { font-size:11px; color:#b42318; border:1px solid #f3c6c1; background:#fdf0ef;
+         border-radius:3px; padding:0 4px; margin-left:4px; white-space:nowrap; }
+  .ok { color:#1f6f4a; font-weight:600; }
+  .sec { color:#1f6f4a; font-size:12.5px; font-weight:600; margin:9px 0 3px;
+         letter-spacing:.3px; }
+  .chip { display:inline-block; font-size:11px; color:#3a6ea5; background:#eaf1f8;
+          border:1px solid #cfdff0; border-radius:3px; padding:0 5px; margin-left:5px; }
+  .note { display:flex; gap:18px; margin-top:16px; font-size:12.2px; color:#5f6b78; }
+  .note b { color:#1a2029; font-weight:600; }
+  .note .lead { color:#1a2029; font-weight:600; padding-right:4px; }
+  .more { margin-top:11px; padding-top:9px; border-top:1px dashed #dfe4ea;
+          font-size:11.8px; color:#9aa5b1; line-height:1.6; }
+  .arrow { display:flex; align-items:center; justify-content:center; width:34px;
+           color:#9aa5b1; font-size:20px; }
+</style>
+</head>
+<body>
+  <div class="head">
+    <div>
+      <h1>同一场录音，两种形态</h1>
+      <div class="sub">左边是转写稿原样，右边是素材稿：每一条都能翻回第几行</div>
+    </div>
+    <div class="badge">check_material  PASS</div>
+  </div>
+
+  <div class="cols">
+    <div class="col left">
+      <div class="col-hd"><span class="t">转录原文 <span style="font-weight:400;color:#98a2ae;font-size:12px">示例片段</span></span><span class="n">40 行 / 698 字</span></div>
+      <div class="body">
+        <div class="ln"><span class="no">8</span><span class="txt"><span class="spk">发言人1：</span>那咱们现在这套<span class="bad">畅联通</span>用得怎么样？</span></div>
+        <div class="ln"><span class="no">9</span><span class="txt"><span class="spk">发言人2：</span>买回来第三个年头了，一直没跑起来，太复杂。</span></div>
+        <div class="ln"><span class="no">11</span><span class="txt"><span class="spk">发言人2：</span>主要是料号分不清。一台车拆开就是电池、<span class="bad">门价</span>、充电器几块。</span></div>
+        <div class="ln"><span class="no">13</span><span class="txt"><span class="spk">发言人2：</span>对，电池我们现在是从<span class="bad">宁德</span>那边买回来，装在车上再租出去。</span></div>
+        <div class="ln"><span class="no">19</span><span class="txt"><span class="spk">发言人2：</span>以前就扔<span class="bad">报成仓</span>里，没人管，现在想管起来。</span></div>
+        <div class="ln"><span class="no">21</span><span class="txt"><span class="spk">发言人2：</span>工程师<span class="bad">领药</span>也一样，现在都是口头说一下就拿走了。</span></div>
+        <div class="ln"><span class="no">28</span><span class="txt"><span class="spk">发言人1：</span>上个月盘了两天，还对不上。<span class="tag">这句其实是客户说的</span></span></div>
+        <div class="ln"><span class="no">29</span><span class="txt"><span class="spk">发言人2：</span>系统里可以设盘点单，指定盘哪个仓库、谁来盘。<span class="tag">这句其实是我方说的</span></span></div>
+        <div class="ln"><span class="no">32</span><span class="txt"><span class="spk">发言人1：</span>按你们六个用户算，首年一万五左右，之后每年七千。</span></div>
+        <div class="more">后面还有 8 行，含一段客户接供应商电话的插叙，已单独归到「现场接听电话」一章</div>
+      </div>
+    </div>
+
+    <div class="arrow">→</div>
+
+    <div class="col right">
+      <div class="col-hd"><span class="t">素材稿 <span style="font-weight:400;color:#98a2ae;font-size:12px">示例片段</span></span><span class="n">14 条 / 238 字</span></div>
+      <div class="body">
+        <div class="sec">二、料号与拆机</div>
+        <div class="ln"><span class="txt">- 〔L9〕客户：畅捷通买回来三年，一直没用起来</span></div>
+        <div class="ln"><span class="txt">- 〔L11〕客户：料号分不清，一台车拆开是电池、<span class="ok">门架</span>、充电器</span></div>
+        <div class="ln"><span class="txt">- 〔L13〕客户：电池从<span class="ok">林德</span>买回来，装上再租</span></div>
+        <div class="sec">三、旧件与领料</div>
+        <div class="ln"><span class="txt">- 〔L19〕客户：旧件以前扔<span class="ok">报损仓</span>，没人管</span></div>
+        <div class="ln"><span class="txt">- 〔L22〕我方：<span class="ok">领料</span>要有单子，谁领多少可查</span></div>
+        <div class="sec">四、盘点与报价</div>
+        <div class="ln"><span class="txt">- 〔L28〕客户：上月盘了两天还对不上<span class="chip">标签是发言人1</span></span></div>
+        <div class="ln"><span class="txt">- 〔L29〕我方：可设盘点单，指定仓库和盘点人<span class="chip">标签是发言人2</span></span></div>
+        <div class="ln"><span class="txt">- 〔L32〕我方：六个用户首年一万五，之后每年七千</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="note">
+    <span class="lead">真实一场两小时面谈</span>
+    <span>原文 <b>50472</b> 字</span>
+    <span>素材稿 <b>13600</b> 字（压缩比 0.269）</span>
+    <span><b>667</b> 条全部带行号</span>
+    <span>双栏回搜 <b>651</b> 句：高 433 ／ 中 208 ／ 低 10</span>
+  </div>
+</body>
+</html>
